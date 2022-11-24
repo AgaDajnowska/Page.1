@@ -1,0 +1,31 @@
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: $color-primary;
+  line-height: 28px;
+  letter-spacing: 2px;
+  font-family: $font-open-sans;
+}
+
+a{
+  text-decoration: none;
+}
+
+.container{
+  width: 1352px;
+  margin: 0 auto 70px auto;
+
+  @include notebook {
+    width: 100%;
+    padding: 0 15px;
+    margin: 0 auto 20px auto
+  }
+  @include mobile {
+    width: 100%;
+    padding: 0 15px;
+    margin: 0 auto 20px auto
+  }
+}

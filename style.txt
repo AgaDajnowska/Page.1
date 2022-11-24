@@ -1,0 +1,79 @@
+.warehouses_conatiner{
+width: 1000px;
+display: flex;
+justify-content: space-between;
+flex-wrap: wrap;
+}
+
+.warehouses-type_face{
+width: 300px;
+height: 200px;
+overflow: hidden;
+transition: 0,4s;
+}
+
+
+.warehouse-type_face1{
+position: relative;
+bacground: #333;
+display: flex;
+justify-content: center;
+aling-items: center;
+aling-content: center;
+transform: translateY(100px);
+z-index: 1;
+}
+
+.warehouse-type_face2{
+background: whitesmoke;
+display: flex;
+justify-content: center;
+aling-items: center;
+padding: 20px;
+box-sizing: border-box;
+transform: translateY(-100px);
+}
+
+.card:hover .warehouses-type_face .warehouse-type_face1{
+transform: translateY(0);
+box-shadow:
+  30.2px 32.8px 37.3px rgba(96, 118, 125, 0.3),
+  71px 77px 150px rgba(96, 118, 125, 0.5);
+}
+
+.outer{
+opacity: .3:
+text-aling: center;
+transition: 0.5s;
+}
+
+.card:hover{
+background: blue;
+}
+
+.card:hover .outer{
+opacity: 1;
+}
+
+.card:hover .warehouses-type_face .warehouse-type_face2{
+transform: translateY(0);
+}
+
+.warehouses-img{
+width: 300px;
+height: 200px;
+}
+
+p, a {
+font-size: 10pt;
+margin: 0;
+padding: 0;
+color: #333;
+}
+
+.warehouse-location_title{
+position: absolute;
+top: 135px;
+color: #fff;
+}
+

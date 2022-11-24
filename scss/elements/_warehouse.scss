@@ -1,0 +1,16 @@
+.main_section_warehouse {
+  background: url(https://as1.ftcdn.net/v2/jpg/03/89/64/96/1000_F_389649653_EMeuQUFOUzt4LX0NRVrEtAQfMFzH8bTC.jpg) fixed, center;
+  margin: 0 !important;
+  width: 100%;
+  height: 300px;
+  background-size: cover;
+  box-shadow: -2px -13px 32px -13px $color-shadow;
+
+  &:before{
+    background-color: $color-shadow;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 110%;
+  }
+}

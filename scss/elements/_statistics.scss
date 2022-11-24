@@ -1,0 +1,112 @@
+.statistics {
+  padding-bottom: 60px;
+  display: flex;
+  flex-direction: column;
+
+  @include notebook {
+    width: 80%;
+  }
+
+  @include mobile{
+    padding-bottom: 30px;
+  }
+
+  &_title {
+    text-transform: uppercase;
+    size: 40px;
+
+    h2 {
+      font-size: 30px;
+      margin: 15px 0 50px;
+      text-align: center;
+
+      @include mobile {
+        size: 30px;
+        margin: 15px 0;
+      }
+    }
+  }
+
+  &_container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-top: 59px;
+
+    @include mobile {
+      margin: 35px auto 50px;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    .statistic {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      overflow-wrap: break-word;
+
+      @include mobile {
+        width: 100%;
+        margin-bottom: 25px;
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+
+      &_number {
+        font-size: 60px;
+
+        @include mobile {
+          font-size: 30px;
+        }
+      }
+
+      &_description{
+        @include mobile {
+          font-size: 15px;
+        }
+      }
+
+      &_icon {
+        display: inline-block;
+        position: relative;
+        height: 66px;
+        width: 66px;
+        background-size: cover !important;
+        margin: 14px 2px;
+
+        @include mobile {
+          height: 33px;
+          width: 33px;
+          margin: 7px auto;
+        }
+      }
+    }
+
+    .statistic + span {
+      @include mobile {
+        background: $color-neon-blue;
+        position: relative;
+        width: 50%;
+        height: 1px;
+        margin-bottom: 5px;
+      }
+    }
+
+    .icon_warehouse {
+      background: url("https://cdn2.iconfinder.com/data/icons/maki/100/warehouse-512.png") no-repeat center;
+    }
+
+    .icon_forklift {
+      background: url("https://cdn1.iconfinder.com/data/icons/working-tools-3/64/x-01-512.png") no-repeat center;
+    }
+
+    .icon_cart {
+      background: url("https://cdn0.iconfinder.com/data/icons/freebies-1/24/warehouse-cart-packages-512.png") no-repeat center;
+    }
+
+    .icon_worker {
+      background: url("https://cdn0.iconfinder.com/data/icons/selling-product-online/249/sell-product-online-004-512.png") no-repeat center;
+    }
+  }
+}

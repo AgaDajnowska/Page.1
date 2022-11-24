@@ -1,0 +1,167 @@
+header {
+  #page {
+    &_header {
+      height: 100px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: $color-black-primary;
+      box-shadow: 0 0 15px 2px $color-black-shadow;
+      overflow: hidden;
+      transition: 0.4s ease;
+      position: fixed;
+      top: 0;
+      z-index: 100;
+      width: 100%;
+
+    }
+
+    &_logo {
+      height: 90px;
+      transition: all 1s;
+    }
+  }
+
+  nav {
+    width: 100%;
+
+    .page_nav {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+
+      @include mobile {
+        position: absolute;
+        left: 0;
+        top: 95px;
+        flex-direction: column;
+        background-color: white;
+        width: 100%;
+        padding-bottom: 20px;
+        display: none;
+
+        & li {
+          margin: 0 15px;
+
+          & a {
+            text-transform: uppercase;
+            text-decoration: none;
+            font-weight: bold;
+            color: $color-light-gray;
+            transition: color 0.4s ease;
+
+            & :hover {
+              color: $color-light-purple;
+            }
+          }
+        }
+      }
+    }
+
+    .hamburger_btn_conatiner {
+      margin-left: 90%;
+
+      .hamburger {
+        display: none;
+
+        @include mobile {
+          display: block;
+          margin: 0;
+          padding: 0;
+          border: 0;
+          background-color: transparent;
+          cursor: pointer;
+
+          &:focus {
+            & > .hamburger_container {
+              box-shadow: 0 0 2px 2px $color-neon-blue;
+            }
+          }
+
+          &,
+          &_container {
+            &:focus {
+              outline: none;
+            }
+          }
+
+          &_container {
+            display: flex;
+            align-items: center;
+            position: relative;
+            width: 35px;
+            height: 30px;
+          }
+
+          &_bars {
+            position: absolute;
+            width: 35px;
+            height: 2px;
+            background-color: $color-neon-purple;
+            transition: transform 220ms ease-in-out;
+
+            &::before, &::after {
+              display: block;
+              position: absolute;
+              width: 35px;
+              height: 2px;
+              background-color: $color-neon-purple;
+              content: '';
+            }
+
+            &::before {
+              top: -12px;
+              transition: top 100ms 250ms ease-in, transform 220ms ease-in-out;
+            }
+
+            &::after {
+              bottom: -12px;
+              transition: bottom 100ms 250ms ease-in,
+              transform 220ms ease-in-out;
+            }
+          }
+
+          &_active {
+            .hamburger_bars {
+              transform: rotate(225deg);
+              transition: transform 220ms 120ms ease-in-out;
+
+              &::before {
+                top: 0;
+                transition: top 100ms ease-out;
+              }
+
+              &::after {
+                bottom: 0;
+                transform: rotate(-90deg);
+                transition: bottom 100ms ease-out,
+                transform 220ms 120ms ease-in-out;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .page_banner_img{
+    width: 100%;
+    max-width: 100%;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,107 @@
+.warehouses {
+  h1 {
+    width: 100%;
+    color: $color-blue;
+    text-shadow: 2px 2px $color-purple;
+    text-align: center;
+    font-size: 48px;
+    font-weight: 300;
+    line-height: 52px;
+    letter-spacing: 20px;
+    margin: 30px 0;
+    text-transform: uppercase;
+
+    @include mobile {
+      font-size: 35px;
+    }
+  }
+  .warehouses_container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .blog_card {
+      display: flex;
+      width: 90%;
+      padding: 10px;
+      margin-bottom: 35px;
+      border-radius: 1%;
+      background-color: $color-secondary;
+      border: 2px solid $color-secondary;
+      box-shadow: 0 4px 21px -12px $color-black-shadow;
+      transition: box-shadow 0.4s ease, transform 0.2s ease;
+
+      &:hover {
+        box-shadow: 0 34px 32px -33px rgba(0, 0, 0, .18);
+        transform: translate(0px, -3px);
+      }
+      &_type1 {
+        background-image: linear-gradient(-250deg, $color-dark-purple, transparent 50%);
+      }
+
+      &_type2{
+        display: flex;
+        flex-direction: row-reverse;
+        background-image: linear-gradient(-70deg, $color-dark-blue, transparent 50%);
+
+      }
+
+      .warehouses{
+        &_type {
+          margin: 15px 20px;
+          padding: 10px 0 0 0;
+          width: 75%;
+        }
+        &_img{
+          width: 20%;
+          height: 100%;
+          border-radius: 52% 48% 50% 50% / 79% 30% 70% 21% ;
+          filter: grayscale(1);
+          transition: transform 0.4s ease, border-radius 1s ease, filter 0.5s ease;
+        @include mobile {
+          display: none;
+        }
+        }
+
+        .warehouse {
+          &_title {
+            font-size: 25px;
+            margin-bottom: 10px;
+
+            &:nth-child(even) {
+              text-align: right;
+            }
+          }
+        }
+        .warehouse_description_blog_card{
+            width: 90%;
+            padding: 15px;
+            border-bottom: 0.5px double black;
+            font-size: 5px;
+          letter-spacing: 1px;
+        }
+      }
+    }
+    .blog_card_type2>.warehouses_type>.warehouse_title{
+      text-align: end;
+      margin-right: 55px;
+    }
+
+    .blog_card_type1>.warehouses_type>.warehouse_description_blog_card{
+      border-left: 0.5px double black;
+    }
+
+    .blog_card_type2>.warehouses_type>.warehouse_description_blog_card{
+      border-right: 0.5px double black;
+    }
+
+    .blog_card_type2>.warehouses_img{
+      border-radius: 52% 48% 50% 50% / 38% 77% 23% 62%;
+    }
+    .blog_card:hover .warehouses_img {
+      transform: scale(1.05);
+      border-radius: 10px;
+      filter: grayscale(0);
+    }
+  }
+}
